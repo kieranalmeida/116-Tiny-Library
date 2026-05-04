@@ -28,3 +28,11 @@ export default function RootLayout( {children}: RootLayoutProps ) {
     </html>
   )
 }
+
+// Routes
+// /
+// /books
+// /books/[id]
+// /books/categories/[categoryName]
+// /about
+// /about/contact

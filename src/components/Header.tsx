@@ -3,39 +3,40 @@ import type { JSX } from "react"
 import { usePathname } from "next/navigation"
 import Image from "next/image"
 import Link from "next/link"
+import NavLink from "@/src/components/NavLink"
 
 export default function Header(): JSX.Element {
     const pathname: string = usePathname()
 
     return (
-        <header className="mb-10 px-5 py-2.5 lg:px-10">
+        <header className="mb-10 px-5 py-2.5 lg:px-10 border-2 border-gray-500 border-dotted">
             <nav className="flex justify-between items-center">
-                <Image 
-                    className="hidden lg:block" 
-                    width={178} 
-                    height={117} 
-                    src="/tinylibrary-logo-desktop.svg" 
-                    alt="Tiny Library logo"
-                />
-                <Image
-                    className="lg:hidden" 
-                    width={80} 
-                    height={53} 
-                    src="/tinylibrary-logo-mobile.svg" 
-                    alt="Tiny Library logo" 
-                />
+                <Link href="/">
+                    <Image
+                        className="hidden lg:block" 
+                        width={178} 
+                        height={117} 
+                        src="/tinylibrary-logo-desktop.svg" 
+                        alt="Tiny Library logo"
+                    />
+                    <Image
+                        className="lg:hidden" 
+                        width={80} 
+                        height={53} 
+                        src="/tinylibrary-logo-mobile.svg" 
+                        alt="Tiny Library logo" 
+                    />
+                </Link>
 
-                <ul className="flex gap-x-10 text-gray text-[0.875rem] font-semibold tracking-[5%] uppercase hover:text-neutral-950">
+                <ul className="flex gap-x-10">
                     <li>
-                        <Link href="/books" className={pathname === "/books" ? "text-orange" : ""}>Books</Link>
+                        <NavLink href="/books" isActive={pathname === "/books"}>Books</NavLink>
                     </li>
                     <li>
-                        <Link href="/about" className={pathname === "/about" ? "text-orange" : ""}>About</Link>
+                        <NavLink href="/about" isActive={pathname === "/about"}>About</NavLink>
                     </li>
                 </ul>
             </nav>
         </header>
     )
 }
-
-// NavLink (?)

@@ -1,7 +1,6 @@
 import type { JSX } from "react"
 import Image from "next/image"
 
-// border-2 border-gray-500 border-dotted
 export default function HomePage(): JSX.Element {
   return (
     <main className="text-neutral-950 lg:flex lg:justify-center lg:items-center lg:gap-x-25">
