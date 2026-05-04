@@ -1,5 +1,31 @@
-export default function HomePage() {
+import type { JSX } from "react"
+import Image from "next/image"
+
+// border-2 border-gray-500 border-dotted
+export default function HomePage(): JSX.Element {
   return (
-    <h1>Home page</h1>
+    <main className="text-neutral-950 lg:flex lg:justify-center lg:items-center lg:gap-x-25">
+      <div className="px-5 lg:max-w-150">
+        <p className="hidden text-[1rem] font-medium tracking-[5%] uppercase lg:block">Browse books</p>
+        <h1 className="text-[3.375rem] font-bold mb-5 lg:text-[3.5rem] lg:mt-5">Find your next favourite book</h1>
+        <p className="text-[1.4375rem] lg:text-[1.75rem]">Tiny Library is a cosy corner of the web where readers discover hand‑picked titles across every genre, from timeless classics to hidden indie gems.</p>
+        <button className="text-[1.25rem] font-semibold uppercase my-10 p-3 border-2 border-neutral-950 cursor-pointer hover:text-neutral-50 hover:bg-neutral-950">Browse books</button>
+      </div>
+
+      <Image
+        className="hidden lg:block"
+        width={729}
+        height={729}
+        src="/hero-image-desktop.svg"
+        alt="A picture of waves rolling in on a beach"
+      />
+      <Image
+        className="w-full lg:hidden mask-[linear-gradient(to_top,black_30%,transparent)]"
+        width={465.83}
+        height={465.83}
+        src="/hero-image-mobile.svg"
+        alt="A picture of waves rolling in on a beach"
+      />
+    </main>
   )
 }
