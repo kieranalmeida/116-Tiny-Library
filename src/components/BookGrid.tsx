@@ -1,15 +1,6 @@
+import type { Book } from "@/src/types/types"
 import type { JSX } from "react"
 import BookCard from "@/src/components/BookCard"
-
-type Book = {
-    id: number
-    name: string
-    author: string
-    likes: number
-    image: string
-    category: string
-    dateAdded: string
-}
 
 type BookGridProps = {
     books: Book[]
@@ -29,6 +20,4 @@ export default function BookGrid( {books}: BookGridProps ): JSX.Element {
     )
 }
 
-// Styling
-// Type imports
 // Fix overflow

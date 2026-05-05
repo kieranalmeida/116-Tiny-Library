@@ -1,17 +1,8 @@
+import type { Book } from "@/src/types/types"
 import type { JSX } from "react"
 import Link from "next/link"
 import { CiHeart } from "react-icons/ci"
 import { albertSans } from "@/src/styles/fonts"
-
-type Book = {
-    id: number
-    name: string
-    author: string
-    likes: number
-    image: string
-    category: string
-    dateAdded: string
-}
 
 type BookCardProps = {
     book: Book
