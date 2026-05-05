@@ -9,13 +9,13 @@ export default function HomePage(): JSX.Element {
         <p className="hidden text-[1rem] font-medium tracking-[5%] uppercase lg:block">Browse books</p>
         <h1 className="text-[3.375rem] font-bold mb-5 lg:text-[3.5rem] lg:mt-5">Find your next favourite book</h1>
         <p className="text-[1.4375rem] lg:text-[1.75rem]">Tiny Library is a cosy corner of the web where readers discover hand‑picked titles across every genre, from timeless classics to hidden indie gems.</p>
-        <button className="text-[1.25rem] font-semibold uppercase my-10 p-3 border-2 border-neutral-950 cursor-pointer hover:text-neutral-50 hover:bg-neutral-950">Browse books</button>
+        <Link href="/books" className="inline-block text-[1.25rem] font-semibold uppercase my-10 p-3 border-2 border-neutral-950 cursor-pointer hover:text-neutral-50 hover:bg-neutral-950">Browse books</Link>
       </div>
 
       <Image
         className="hidden lg:block"
-        width={729}
-        height={729}
+        width={650}
+        height={650}
         src="/hero-image-desktop.svg"
         alt="A picture of waves rolling in on a beach"
       />
@@ -29,5 +29,3 @@ export default function HomePage(): JSX.Element {
     </main>
   )
 }
-
-// Button link
