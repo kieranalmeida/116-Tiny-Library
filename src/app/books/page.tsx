@@ -1,7 +1,10 @@
+import { getAllBooks } from "@/src/lib/books"
+import BookGrid from "@/src/components/BookGrid"
+
 export default function BooksPage() {
+    const books = getAllBooks()
+
     return (
-        <main>
-            <h1>Books page</h1>
-        </main>
+        <BookGrid books={books}/>
     )
 }

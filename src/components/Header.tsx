@@ -9,7 +9,7 @@ export default function Header(): JSX.Element {
     const pathname: string = usePathname()
 
     return (
-        <header className="mb-10 px-5 py-2.5 lg:px-10 border-2 border-gray-500 border-dotted">
+        <header className="mb-10 px-5 py-2.5 lg:px-10">
             <nav className="flex justify-between items-center">
                 <Link href="/">
                     <Image
