@@ -9,8 +9,8 @@ export default function CategoriesNav(): JSX.Element {
     const categories = getAllCategories()
 
     return (
-        <nav className="p-5">
-            <ul className="flex flex-row gap-x-5 overflow-x-scroll lg:flex-col lg:gap-y-5 lg:overflow-hidden">
+        <nav className="p-5 lg:relative lg:top-40">
+            <ul className="flex flex-row gap-x-5 overflow-x-scroll whitespace-nowrap lg:flex-col lg:gap-y-5 lg:overflow-hidden">
                 <NavLink href="/books" isActive={pathname === "/books"}>All</NavLink>
 
                 {categories.map( (category) => 

@@ -30,7 +30,7 @@ export default function Header(): JSX.Element {
 
                 <ul className="flex gap-x-10">
                     <li>
-                        <NavLink href="/books" isActive={pathname === "/books"}>Books</NavLink>
+                        <NavLink href="/books" isActive={pathname.startsWith("/books") }>Books</NavLink>
                     </li>
                     <li>
                         <NavLink href="/about" isActive={pathname === "/about"}>About</NavLink>
