@@ -29,9 +29,8 @@ export default function BookCard( {book}: BookCardProps ): JSX.Element {
                         <p className={`text-gray ${albertSans.className}`}>{book.likes}</p>
                     </div>
                 </div>
+
             </div>
         </Link>
     )
 }
-
-// Clicking on category type navigates to that category

@@ -5,3 +5,10 @@ import books from "@/src/data/books.json"
 export function getAllBooks(): Book[] {
     return books
 }
+
+export function getBookById(id: string) {
+    console.log(id)
+    const targetBook = books.filter( (book) => book.id.toString() === id)[0]
+    console.log("Target book:", targetBook)
+    return targetBook
+}

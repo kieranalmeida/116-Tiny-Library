@@ -1,5 +1,6 @@
 import { getAllBooks } from "@/src/lib/books"
 import { getDisplayNameBySlug } from "@/src/lib/categories"
+import type { JSX } from "react"
 import BookGrid from "@/src/components/BookGrid"
 
 type CategoryPageProps = {
@@ -8,7 +9,7 @@ type CategoryPageProps = {
     }
 }
 
-export default async function CategoryPage( {params}: CategoryPageProps ) {
+export default async function CategoryPage( {params}: CategoryPageProps ): Promise<JSX.Element> {
     const books = getAllBooks()
     const value = await params
 
@@ -21,6 +22,6 @@ export default async function CategoryPage( {params}: CategoryPageProps ) {
     : books
 
     return (
-        <BookGrid title={displayName} books={filteredBooks}/>
+        <BookGrid title={`${displayName} Books`} books={filteredBooks}/>
     )
 }

@@ -5,6 +5,6 @@ export default function BooksPage() {
     const books = getAllBooks()
 
     return (
-        <BookGrid title={"Books"} books={books}/>
+        <BookGrid title={"All Books"} books={books}/>
     )
 }

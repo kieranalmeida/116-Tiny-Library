@@ -20,5 +20,3 @@ export default function BookGrid( {title, books}: BookGridProps ): JSX.Element {
         </main>
     )
 }
-
-// Search bar
