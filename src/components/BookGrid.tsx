@@ -22,4 +22,3 @@ export default function BookGrid( {books}: BookGridProps ): JSX.Element {
 
 // Filter books by category
 // Search bar
-// Book detail page

@@ -11,14 +11,14 @@ type BookCardProps = {
 export default function BookCard( {book}: BookCardProps ): JSX.Element {
     return (
         <Link href={`/books/${book.id}`}>
-            <div className="text-neutral-950 transition hover:scale-101 hover:shadow-lg">
+            <div className="text-neutral-950 border border-light-gray rounded-md shadow-md transition hover:scale-101 hover:shadow-xl">
                 <img
-                    className="w-full rounded-tl-lg rounded-tr-lg"
+                    className="w-full rounded-t-md"
                     src={book.image}
                     alt={book.name}
                 />
 
-                <div className="flex flex-col items-start gap-y-4.5 p-4 border border-t-0 border-light-gray rounded-bl-lg rounded-br-lg">
+                <div className="flex flex-col items-start gap-y-4.5 p-4">
                     <h2 className="text-[1.5rem] font-bold">{book.name}</h2>
                     <p className="text-[1.25rem]">{book.author}</p>
 
@@ -33,3 +33,5 @@ export default function BookCard( {book}: BookCardProps ): JSX.Element {
         </Link>
     )
 }
+
+// Clicking on category type navigates to that category
