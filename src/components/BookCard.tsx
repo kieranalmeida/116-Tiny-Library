@@ -10,7 +10,7 @@ type BookCardProps = {
 
 export default function BookCard( {book}: BookCardProps ): JSX.Element {
     return (
-        <Link href={`/books/${book.id}`}>
+        <Link href={`/books/${book.id}`} aria-label={`View ${book.name}.`}>
             <div className="text-neutral-950 border border-light-gray rounded-md shadow-md transition hover:scale-101 hover:shadow-xl">
                 <img
                     className="w-full rounded-t-md"
@@ -25,7 +25,7 @@ export default function BookCard( {book}: BookCardProps ): JSX.Element {
                     <p className="border border-light-gray rounded-full px-2 py-1 hover:border-neutral-950 hover:bg-[#F2F2F2]">{book.category}</p>
 
                     <div className="flex items-center gap-x-1">
-                        <CiHeart size={24} className="fill-gray cursor-pointer transition hover:fill-neutral-950 hover:scale-115"/>
+                        <CiHeart size={24} className="fill-gray cursor-pointer transition hover:fill-neutral-950 hover:scale-115" aria-hidden="true"/>
                         <p className={`text-gray ${albertSans.className}`}>{book.likes}</p>
                     </div>
                 </div>

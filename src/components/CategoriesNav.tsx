@@ -11,10 +11,10 @@ export default function CategoriesNav(): JSX.Element {
     return (
         <nav className="p-5 lg:relative lg:top-40">
             <ul className="flex flex-row gap-x-5 overflow-x-scroll whitespace-nowrap lg:flex-col lg:gap-y-5 lg:overflow-hidden">
-                <NavLink href="/books" isActive={pathname === "/books"}>All</NavLink>
+                <NavLink href="/books" isActive={pathname === "/books"} aria-label="View all books.">All</NavLink>
 
                 {categories.map( (category) => 
-                    <NavLink key={category.slug} href={`/books/categories/${category.slug}`} isActive={pathname === `/books/categories/${category.slug}`}>{category.displayName}</NavLink>
+                    <NavLink key={category.slug} href={`/books/categories/${category.slug}`} isActive={pathname === `/books/categories/${category.slug}`} aria-label={`View ${pathname} books.`}>{category.displayName}</NavLink>
                 )}
             </ul>
         </nav>

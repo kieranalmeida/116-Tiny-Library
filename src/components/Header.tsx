@@ -30,10 +30,10 @@ export default function Header(): JSX.Element {
 
                 <ul className="flex gap-x-10">
                     <li>
-                        <NavLink href="/books" isActive={pathname.startsWith("/books") }>Books</NavLink>
+                        <NavLink href="/books" isActive={pathname.startsWith("/books") } aria-label="Browse the books in the Tiny Library collection.">Books</NavLink>
                     </li>
                     <li>
-                        <NavLink href="/about" isActive={pathname.startsWith("/about")}>{pathname === "/about/contact" ? "About: Contact" : "About"}</NavLink>
+                        <NavLink href="/about" isActive={pathname.startsWith("/about")} aria-label="Learn about Tiny Library.">{pathname === "/about/contact" ? "About: Contact" : "About"}</NavLink>
                     </li>
                 </ul>
             </nav>

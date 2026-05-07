@@ -25,7 +25,7 @@ export default async function BookDetailPage( {params}: BookDetailPageProps ) {
 
             <div className="flex flex-col items-start md:w-full">
                 <div className="flex items-center gap-x-1 mt-5 mb-1.5">
-                    <CiHeart size={28} className="fill-gray cursor-pointer transition hover:fill-neutral-950 hover:scale-115"/>
+                    <CiHeart size={28} className="fill-gray cursor-pointer transition hover:fill-neutral-950 hover:scale-115" aria-hidden="true"/>
                     <p className={`text-[1.25rem] text-gray md:text-[1.5rem]`}>{targetBook.likes}</p>
                 </div>
 
