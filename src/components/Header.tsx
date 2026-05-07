@@ -33,7 +33,7 @@ export default function Header(): JSX.Element {
                         <NavLink href="/books" isActive={pathname.startsWith("/books") }>Books</NavLink>
                     </li>
                     <li>
-                        <NavLink href="/about" isActive={pathname === "/about"}>About</NavLink>
+                        <NavLink href="/about" isActive={pathname.startsWith("/about")}>{pathname === "/about/contact" ? "About: Contact" : "About"}</NavLink>
                     </li>
                 </ul>
             </nav>
