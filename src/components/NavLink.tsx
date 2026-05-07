@@ -7,6 +7,7 @@ type NavLinkProps = {
     children: React.ReactNode
 }
 
+
 export default function NavLink( {href, isActive, children}: NavLinkProps ): JSX.Element {
     return (
         <Link 

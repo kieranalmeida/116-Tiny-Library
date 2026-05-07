@@ -15,10 +15,4 @@ export default function RootLayout( {children}: RootLayoutProps ) {
   )
 }
 
-// Routes
-// /
-// /books
-// /books/[id]
-// /books/categories/[categoryName]
-// /about
-// /about/contact
+// Accessibility

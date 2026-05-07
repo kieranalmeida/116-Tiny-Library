@@ -1,4 +1,6 @@
-export default function ContactPage() {
+import type { JSX } from "react"
+
+export default function ContactPage(): JSX.Element {
     return (
         <main className="flex flex-col gap-y-5 p-5 text-neutral-950 md:max-w-150 md:mx-auto">
             <p className="text-[0.875rem] font-medium uppercase">Ways to reach us</p>

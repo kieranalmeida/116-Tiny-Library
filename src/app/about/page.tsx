@@ -81,6 +81,3 @@ export default function AboutPage(): JSX.Element {
         </main>
     )
 }
-
-// Borders
-// Desktop Styling
