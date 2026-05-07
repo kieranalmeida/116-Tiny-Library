@@ -25,7 +25,7 @@ export default function BookCard( {book}: BookCardProps ): JSX.Element {
                     <p className="border border-light-gray rounded-full px-2 py-1 hover:border-neutral-950 hover:bg-[#F2F2F2]">{book.category}</p>
 
                     <div className="flex items-center gap-x-1">
-                        <CiHeart className="fill-gray w-7 h-7 cursor-pointer transition hover:fill-neutral-950 hover:scale-115"/>
+                        <CiHeart size={24} className="fill-gray cursor-pointer transition hover:fill-neutral-950 hover:scale-115"/>
                         <p className={`text-gray ${albertSans.className}`}>{book.likes}</p>
                     </div>
                 </div>
